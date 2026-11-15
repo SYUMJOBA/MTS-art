@@ -46,6 +46,16 @@ A file that is still one block (not split into these parts yet) is listed in the
 cannot be played until it is split. Since 2026-11-15 every file here is split; the unsplit
 originals of the last ten are kept in `../extras/unsplit originals/`.
 
+## Armour is not part of the body
+
+Worn armour lives in its own files in the game repo (`public/assets/mts/armour/<Set>.vox`, same
+frame as these files, one object per body part it covers, named after that part) and is laid
+over the body in the game. So a file here is the body WITHOUT its armour.
+
+Oriy's orichalcum harness was taken out of `Oriy.vox` on 2026-11-15 by the AI
+(`tools/art/strip-armour.ts` in the game repo) and became the set `armour/Orichalcum.vox`; Oriy
+wears it by default. Body + set hold exactly the voxels of `../extras/unsplit originals/Oriy.vox`.
+
 # There are a few exceptional added named parts to these schemas
 
 In the game, all of them are moved by **physics** (they swing with the character's motion)
