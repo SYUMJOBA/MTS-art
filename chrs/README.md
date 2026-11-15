@@ -25,6 +25,23 @@ Every character is split into the same named parts as Nox (`Nox.vox`), the stand
 Shoulders and thighs are 3 rows tall and repeat the top row of the arm or leg below them; the
 game puts the elbow and knee hinge in that shared row.
 
+### Fingers (`thumb`, `index`, `pinky`)
+
+Each hand is two parts deep: the **palm** keeps the name `hand-l` / `hand-r` (its top row), and
+the bottom row is three one-voxel fingers, each its own object:
+
+- `thumb-l` / `thumb-r`: front, on the inner side (toward the body)
+- `index-l` / `index-r`: front, on the outer side
+- `pinky-l` / `pinky-r`: back, on the outer side
+
+The fourth bottom cell (back, inner side) is left empty: it is the **grip hole** a held object
+goes through (Paldi's staff does). If a hand fills it, that voxel stays part of the palm. A hand
+that is only one row tall (Riko) has no fingers.
+
+In the game each finger hinges on the palm at its top, ready for grabbing animations. The
+split was done on 2026-11-15 by the AI with `tools/art/split-fingers.ts` in the game repo (it
+moved no voxel and changed no colour); the names are a proposal, rename them if you prefer.
+
 A file that is still one block (not split into these parts yet) is listed in the game but
 cannot be played until it is split. Since 2026-11-15 every file here is split; the unsplit
 originals of the last ten are kept in `../extras/unsplit originals/`.
