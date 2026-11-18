@@ -35,7 +35,7 @@ the bottom row is three one-voxel fingers, each its own object:
 - `pinky-l` / `pinky-r`: back, on the outer side
 
 The fourth bottom cell (back, inner side) is left empty: it is the **grip hole** a held object
-goes through (Paldi's staff does). If a hand fills it, that voxel stays part of the palm. A hand
+goes through (Paldi's sword did; it is an item now, `../items/sword.vox`). If a hand fills it, that voxel stays part of the palm. A hand
 that is only one row tall (Riko) has no fingers.
 
 In the game each finger hinges on the palm at its top, ready for grabbing animations. The
